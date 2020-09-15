@@ -40,9 +40,9 @@ const createElement = (tagName, attributes, ...childNodes) => {
 	return newElement;
 };
 
-const sideTab = document.querySelector(".flex-shrink-0.col-3");
-
-const
+const sideTab =
+	document.querySelector(".flex-shrink-0.col-3") || // pull request
+	document.querySelector(".flex-shrink-0.col-12.col-md-3"); // create pull request
 
 const title = createElement("div", {
 	class: "discussion-sidebar-heading text-bold",
