@@ -27,11 +27,6 @@ const createElement = (tagName, attributes, ...childNodes) => {
 		if (node === null) {
 			continue;
 		}
-		// comopnent
-		if (node instanceof Component) {
-			fragment.appendChild(node.getElement());
-			continue;
-		}
 
 		fragment.appendChild(node);
 	}
@@ -49,4 +44,19 @@ const title = createElement("div", {
 	text: "Review Makes Developer",
 });
 
+const form = createElement(
+	"form",
+	{ class: "thread-subscribe-form" },
+	createElement("button", {
+		class: "btn btn-block btn-sm thread-subscribe-button black-and-white",
+		text: "request review with RMD",
+	}),
+	createElement("p", {
+		class: "reason text-small text-gray",
+		text:
+			"unpredator encourage every developers to take one step further with reviewing each others code",
+	})
+);
+
+sideTab.prepend(form);
 sideTab.prepend(title);
