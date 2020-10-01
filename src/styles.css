@@ -1,11 +1,14 @@
 .black-and-white {
-	background: black !important;
-	color: white !important;
-	margin-bottom: 8px;
-	border-color: black !important;
-	box-shadow: none !important;
+  background: black !important;
+  color: white !important;
+  margin-bottom: 8px;
+  border-color: black !important;
+  box-shadow: none !important;
+  /* opacity: 2; */
+  transition: all 2s ease-in;
 }
 
-.black-and-white :hover {
-	opacity: 0.95;
+.black-and-white:hover {
+  background: white !important;
+  color: black !important;
 }
